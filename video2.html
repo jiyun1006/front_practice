@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .videoWrapper{
+                width : 600px;
+                max-width : 100%;
+            }
+            /* 한겹의 div를 더 만들어서 최대크기를 조정 600이상으로 못늘림. */
+
+            .videoContainer {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 30px;
+                height: 0;
+                overflow: hidden;
+            }
+
+            .videoContainer iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        
+        </style>
+
+    </head>
+    <body>
+        <div class="videoWrapper">
+            <div class="videoContainer">
+                <iframe
+                    src="https://www.youtube.com/embed/FAyKQn34ccA"
+                    frameborder="0"
+                    width="640"
+                    height="360"></iframe>
+            </div>
+        </div>
+
+    </body>
+</html>
