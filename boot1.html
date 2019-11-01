@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    .col-md-3{
+        border : 1px solid black;
+        background-color : black;
+        color : white;
+    }
+    .col-md-6{
+        borde : 1px solid black;
+        background-color : red;
+    }
+    </style>
+</head>
+<!-- hidden-[]    []의 크기일때 보이지 않게함  -->
+<!-- visivle-[]   []의 크기일때 보이게 함. -->
+<!-- col-md-offset 앞의 그리드 열만큼 offset으로 사용. -->
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-3 col-md-offset"></div>
+            <div class="col-md-3 hidden-md">col-md-3</div>
+            <div class="col-md-3">col-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">col-md-6</div>
+            <div class="col-md-6">col-md-6</div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

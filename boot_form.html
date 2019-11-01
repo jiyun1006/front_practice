@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+    </head>
+    <body>
+        <div class="login">
+            <h1>
+                <a tabindex="-1" title="이지스퍼블리싱" href="http://easyspub.com">이지스퍼블리싱</a>
+            </h1>
+            <form role="form" class="form-inline">
+                <div class="row">
+                    <!-- form태그에 class명으로 form-inline을 넣어줌으로써 한줄로 배치시킨다. -->
+                    <div class="form-group col-md-5 col-sm-6">
+                        <!-- form-group의 div안에 있는 태그들을 일렬로 배치한다. -->
+                        <label for="user_login" class="sr-only">사용자명</label>
+                        <!-- sr-only클래스를 이용하면 화면에 보이지않게 된다. 웹 접근성을 높이는 용도. -->
+                        <input
+                            type="text"
+                            name="log"
+                            id="user_login"
+                            class="form-control"
+                            placeholder="사용자명">
+                        <!-- form-control은 input 의 너비값을 100%로 적용시킨다. -->
+                    </div>
+
+                    <div class="form-group col-md-5 col-sm-6">
+                        <label for="user_pass" class="sr-only">비밀번호</label>
+                        <input
+                            type="password"
+                            name="pwd"
+                            id="user_pass"
+                            class="form-control"
+                            placeholder="비밀번호">
+                    </div>
+                    
+                    <div class="form-group col-md-2 col-sm-12">
+                        <input
+                            type="submit"
+                            name="wp-submit"
+                            id="wp-submit"
+                            class="btn btn-default"
+                            value="로그인">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>

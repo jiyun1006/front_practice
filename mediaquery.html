@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style>
+            
+
+            
+
+            /* 클리어픽스 핵 css float 설정되어있는 항목을 해제 */
+            .clearfix:after,
+            .clearfix:before {
+                content: "";
+                display: table;
+            }
+            .clearfix:after {
+                clear: both;
+            }
+            .clearfix {
+                zoom: 1;
+            }
+            /* 클리어픽스 핵 css float 설정되어있는 항목을 해제 */
+            
+
+
+
+            nav {
+                height: 400px;
+                width: 100%;
+                background: #34495e;
+                font-size: 1em;
+                font-family: Arial, sasa-serif;
+                font-weight: bold;
+                position: relative;
+                border-bottom: 2px solid #34495e;
+
+            }
+            nav ul {
+                padding: 0;
+                margin: 0 auto;
+                width: 600px;
+                height: 40px;
+
+            }
+
+            nav li {
+                display: inline;
+                float: left;
+            }
+
+            nav a {
+                color: #fff;
+                display: inline-block;
+                width: 100px;
+                text-align: center;
+                text-decoration: none;
+                line-height: 40px;
+                text-shadow: 1px 1px 0 #283744;
+            }
+
+            nav li a {
+                border-right: 1px solid #576979;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+            }
+/* -webkit- : 구글, 사파리 브라우저에 적용
+
+l  -moz- : 파이어폭스 브라우저에 적용
+
+l  -ms- : 익스플로러에 적용, 보통 생략합니다.
+
+l  -o- : 오페라 브라우저에 적용*/
+
+            nav li:last-child a {
+                border-right: 0;
+
+            }
+            nav a:active,
+            nav a:hover {
+                background-color: #2c3e50;
+            }
+            nav a#trigger {
+                display: none;
+            }
+
+            @media screen and (max-width:600px){
+            nav{
+                height : auto;
+            }
+            nav ul{
+                width : 100%;
+                display : block;
+                height : auto;
+            }
+            nav li{
+                width : 50%;
+                float : left;
+                position : relative;
+            }
+            nav li a{
+                border-bottom : 1px solid #576979;
+                border-right  : 1px solid #576979;
+            }
+            nav a{
+                text-align : left;
+                width : 100%;
+                text-indent:25px;
+            
+            }
+
+
+            }
+            @media screen and (max-width : 320px){
+            nav{
+                border-bottom :0;
+            }
+            nav ul{
+                display : none;
+                height : auto;
+            }
+            nav li{
+                display : block;
+                float : none;
+                width : 100%;
+            }
+            nav li a{
+                border-bottom : 1px solid #576979;
+            }
+            nav a#trigger{
+                display : block;
+                background-color : #283744;
+                width  : 100%;
+                position : relative;
+            }
+            nav a#trigger:after{
+                content:"";
+                background : url('nav.png')no-repeat;
+                width:30px;
+                height : 30px;
+                display : inline-block;
+                position : absolute;
+                right : 15px;
+                top : 10px;
+            }
+
+            }
+
+        </style>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script>
+    $(function(){
+        var trigger = $('#trigger');
+        var menu = $('nav ul');
+        $(trigger).on('click', function(e){
+            e.preventDefault();
+            menu.slideToggle();
+            // menu에 slideToggle 메서드를 넣어서 클릭하면 slide down 이나 slide up이 되게 한다.
+        });
+        $(window).resize(function(){
+            var w = $(window).width();
+            if(w>320 && menu.is(':hidden')){
+                // 화면크기가 320이상이 되거나 내비게이션의 화면이 감춰지는 if문
+                menu.removeAttr('style');
+                // 모바일 내비게이션을 없앤다.
+            }
+        });
+    });
+    </script>
+    </head>
+    <body>
+
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li>
+                    <a href="">HOME</a>
+                </li>
+                <li>
+                    <a href="">ABOUT</a>
+                </li>
+                <li>
+                    <a href="">WEB</a>
+                </li>
+                <li>
+                    <a href="">DESIGN</a>
+                </li>
+                <li>
+                    <a href="">MAP</a>
+                </li>
+                <li>
+                    <a href="">CONTACT</a>
+                </li>
+
+            </ul>
+            <a href="" id="trigger">MENU</a>
+        </nav>
+    </body>
+</html>
