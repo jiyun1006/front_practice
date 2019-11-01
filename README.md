@@ -30,3 +30,9 @@ form-group  : div내의 요소들을 하나의 그룹으로 묶어주는 역할.
 sr-only : 화면상에서 없애버린다. (html에는 남아있기 때문에 웹접근성을 높인다.)
 ######
 form-control: 태그 내용의 너비값을 100%로 적용시킨다. 
+
+
+# button 태그
+다양한 btn 태그들이 있다.
+###########
+btn태그중 btn-primary에다가 btn-block를 추가하면 상위 div의 너비값을 따라간다.
