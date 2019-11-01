@@ -36,3 +36,15 @@ form-control: 태그 내용의 너비값을 100%로 적용시킨다.
 다양한 btn 태그들이 있다.
 ######
 btn태그중 btn-primary에다가 btn-block를 추가하면 상위 div의 너비값을 따라간다.
+
+
+# table 태그
+다양한 table 태그가 있다.
+#####
+table-striped : 한줄건너 색 넣기
+#####
+table-bordered : 모서리와 테두리 그리기.
+#####
+table-hover : 마우스 올릴 때 색 변환.
+#####
+(상위div에)table-responsive : 가로 스크롤 생기게 함.
